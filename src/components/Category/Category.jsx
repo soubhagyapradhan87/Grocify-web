@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../Heading/Heading";
-import FruitsCat from "../../assets/fruits-and-veggies.png";
+import FruitsCat from "../../assets/fruits-and-veggies-1.png";
 import DairyCat from "../../assets/dairy-and-eggs.png";
 import MeatCat from "../../assets/meat-and-seafood.png";
 import CustomButton from "../CustomButton/CustomButton";
