@@ -8,9 +8,9 @@ import CustomButton from "../CustomButton/CustomButton";
 const Category = () => {
   const renderCards = category.map((card) => {
     return (
-      <div className="flex-1 mt-10 md:mt-1 ">
+      <div key={card.id} className="flex-1 mt-10 md:mt-1 ">
         <div className="w-full min-h-[30vh] relative">
-          <img src={card.image} alt="" className="absolute -bottom-5"/>
+          <img src={card.image} alt="" className="absolute -bottom-5 "/>
         </div>
         <div className="bg-zinc-200 pt-17 p-8 rounded-xl">
           <h3 className="text-zinc-800 text-3xl font-bold">{card.title}</h3>
@@ -22,7 +22,7 @@ const Category = () => {
   });
   return (
     <section>
-      <div className="max-w-[1200px] mx-auto px-10 py-20">
+      <div className="max-w-[1200px] mx-auto px-10 py-10">
         <Heading highlight="Shop" content="By Category" />
         <div className="flex md:flex-row flex-col gap-10 md:mt-15">{renderCards}</div>
       </div>

@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { RiMenuFill,RiMenu3Fill} from "react-icons/ri";
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  
+  const [isScrolled,setIsScrolled]=useState(false)
  
   
   const toggleMenu = () => {
@@ -14,8 +14,22 @@ const NavBar = () => {
     
     
   }
+
+ useEffect(() => {
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 10);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+
   return (
-    <header className="bg-white  fixed py-5 right-0 left-0 z-5">
+    <header className={`bg-white  fixed py-5 right-0 left-0 z-50  ${ isScrolled ? 'shadow-lg':''}`} >
       <nav className="flex items-center md:h-[30px] h-[20px] max-w-[1200px] mx-auto px-10  justify-between">
         <a href="" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify

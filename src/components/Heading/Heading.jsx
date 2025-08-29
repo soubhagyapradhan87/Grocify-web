@@ -6,7 +6,7 @@ const Heading = (props) => {
       <h2 className="md:text-5xl text-[2rem] font-bold">
         <span className="text-orange-500">{props.highlight}</span> {props.content}
       </h2>
-      <div className="w-35 h-1 bg-orange-300 md:mt-5 mt-3 ml-auto"></div>
+      <div className="w-35 h-1 bg-orange-300 md:mt-5 mt-2 ml-auto"></div>
     </div>
   );
 };
